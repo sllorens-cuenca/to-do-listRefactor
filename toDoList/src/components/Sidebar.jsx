@@ -1,12 +1,15 @@
-
+import { Routes, Route, NavLink, Link } from "react-router-dom";
 
 
 function SideBar(){
     return(
         <div className = 'side-bar'>
              
-            <a href="home-page">Home Page</a>
-            <a href="about-page">About Page</a>
+
+            <Link to="/">Home Page</Link>
+            <Link to="/Lists">Lists</Link>
+            <Link to="/about">About</Link>
+
 
         </div>
     )
