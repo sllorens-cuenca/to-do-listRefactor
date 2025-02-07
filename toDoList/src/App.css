@@ -84,6 +84,10 @@ body{
   padding-top: 10%;
 }
 
+.Addtask-box{
+  margin: 50% 10%
+}
+
 /* .side-bar{
   padding-bottom: 10%;
   display: flex;

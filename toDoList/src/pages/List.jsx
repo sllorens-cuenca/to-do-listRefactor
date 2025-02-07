@@ -11,17 +11,13 @@ function List(props) {
                     <ListItem listDetails={listObj} callbackToDelete={props.callbackToDelete} />
 
                 )
-
-                //    {props.moviesArr.map((movieObj) => {
-                //     return (
-                //         <MovieSummary
-                //             key={movieObj.id}
-                //             movieDetails={movieObj}
-                //             callbackToDelete={props.callbackToDelete}
-                //         />)
-                // })}
-
             })}
+             {/* {props.newTasks.map((listObj) => {
+                return (
+                    <ListItem listDetails={listObj} newcallbackToDelete={props.newcallbackToDelete} />
+
+                )
+            })} */}
         </div>
     )
 

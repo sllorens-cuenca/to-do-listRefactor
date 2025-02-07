@@ -6,8 +6,8 @@ function SideBar(){
         <div className = 'side-bar'>
              
 
-            <Link to="/">Home Page</Link>
-            <Link to="/Lists">Lists</Link>
+            <Link to="/">New List</Link>
+            <Link to="/my-lists">My Lists</Link>
             <Link to="/about">About</Link>
 
 
