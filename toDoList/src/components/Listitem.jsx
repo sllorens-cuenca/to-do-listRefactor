@@ -9,7 +9,7 @@
 function ListItem(props) {
     
     return (
-        <div>
+        <div className="list-item">
             <p>{props.listDetails.completed ? "✅" : "❌"} {props.listDetails.task}</p>
 
 

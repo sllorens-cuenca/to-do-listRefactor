@@ -1,5 +1,7 @@
+import '@fontsource/parkinsans';
 import { Routes, Route, NavLink } from "react-router-dom";
 import { useState } from 'react'
+
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -56,17 +58,17 @@ function App() {
 
     return (
         <>
-            <Navbar />
-            
-            <SideBar />
+            <Navbar />            
+            <   SideBar />
           
-
             <Routes>
                 <Route path="/" element={<NewList  callbackToCreate={createTask} tasksArr={taskToDisplay} callbackToDelete={deleteTask}/>} />
                 <Route path="/about" element={<About />} />
                 <Route path="/my-lists" element={<List tasksArr={taskToDisplay} callbackToDelete = {deleteTask}/>} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
+
+        
 
             {/* <Routes>
                 <Route path="/" element={<NewList  callbackToCreate={createTask} tasksArr={taskToDisplay} callbackToDelete={deleteTask} newcallbackToDelete = {newDeleteTask}/>} />
@@ -75,9 +77,6 @@ function App() {
                 <Route path="*" element={<NotFound />} />
             </Routes> */}
 
-         
-              
-          
           
             <Footer />
         </>
