@@ -36,15 +36,16 @@ function App() {
             ...taskDetail,
             id: nextId
         }
-
+        console.log(newTask)
+        setTasktoDisplay(newTask);
     }
-
     return (
         <>
             <Navbar />
             <SideBar />
+            <NewList callbackToCreate={createTask} tasksArr={taskToDisplay} callbackToDelete={deleteTask}/>
             <Routes>
-                <Route path="/" element={<NewList tasksArr={taskToDisplay} callbackToCreate={createTask} callbackToDelete={deleteTask} />} />
+                {/* <Route path="/" element={<List tasksArr={taskToDisplay} callbackToCreate={createTask} callbackToDelete={deleteTask} />} /> */}
                 <Route path="/about" element={<About />} />
                 <Route path="/my-lists" element={<List tasksArr={taskToDisplay} callbackToDelete={deleteTask} />} />
                 <Route path="*" element={<NotFound />} />
