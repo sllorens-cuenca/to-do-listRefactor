@@ -9,15 +9,8 @@ function List(props) {
             {props.tasksArr.map((listObj) => {
                 return (
                     <ListItem listDetails={listObj} callbackToDelete={props.callbackToDelete} />
-
                 )
             })}
-             {/* {props.newTasks.map((listObj) => {
-                return (
-                    <ListItem listDetails={listObj} newcallbackToDelete={props.newcallbackToDelete} />
-
-                )
-            })} */}
         </div>
     )
 

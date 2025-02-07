@@ -1,13 +1,5 @@
 import { useState } from "react";
 
-import ListItem from "../components/listItem";
-
-/* const listscontainer =[]
-then this needs to summ all new list into the new lists container
-
-listscontainers =  NewList
-
-*/
 function NewList(props) {
 
     const [task, setTask] = useState("");
@@ -50,15 +42,7 @@ function NewList(props) {
                 <button>Submit</button>
             </form>
         </div>
-        {/* {props.tasksArr.map((listObj) => {
-                return (
-                    <ListItem listDetails={listObj} callbackToDelete={props.callbackToDelete} />
-
-                )
-            })} */}
       </>
-        
-        
     );
 }
 
