@@ -31,23 +31,22 @@ function App() {
         const taskId = taskToDisplay.map((task) => task.id);
         const maxId = Math.max(...taskId);
         const nextId = maxId + 1;
-
+    
         const newTask = {
-            ...taskDetail,
-            id: nextId
+          ...taskDetail,
+          id: nextId
         }
-        console.log(newTask)
+        // console.log(newTask)
         setTasktoDisplay(newTask);
     }
     return (
         <>
             <Navbar />
             <SideBar />
-            <NewList callbackToCreate={createTask} tasksArr={taskToDisplay} callbackToDelete={deleteTask}/>
             <Routes>
-                {/* <Route path="/" element={<List tasksArr={taskToDisplay} callbackToCreate={createTask} callbackToDelete={deleteTask} />} /> */}
+                <Route path="/" element={<NewList  callbackToCreate={createTask} tasksArr={taskToDisplay} callbackToDelete={deleteTask}/>} />
                 <Route path="/about" element={<About />} />
-                <Route path="/my-lists" element={<List tasksArr={taskToDisplay} callbackToDelete={deleteTask} />} />
+                <Route path="/my-lists" element={<List tasksArr={taskToDisplay} callbackToDelete = {deleteTask}/>} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
