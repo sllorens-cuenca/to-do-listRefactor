@@ -13,7 +13,7 @@ function List(props) {
             })}
         </div>
     )
-
+    
 }
 
 export default List;
