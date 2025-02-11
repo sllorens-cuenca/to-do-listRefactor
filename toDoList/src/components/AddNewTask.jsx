@@ -24,10 +24,10 @@ function AddNewTask(props) {
     return (
         <div className="Addtask-box">
             {/* form */}
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className=".form ">
 
                 <label>
-                    Task to Do:
+                    <a className="h1">Task to Do:</a>
                     <input
                         type="text"
                         name="task"
