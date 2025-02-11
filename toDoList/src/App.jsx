@@ -1,4 +1,4 @@
-import '@fontsource/parkinsans';
+import '@fontsource/bebas-neue';
 import { Routes, Route, NavLink } from "react-router-dom";
 import { useState } from 'react'
 

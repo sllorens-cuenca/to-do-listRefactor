@@ -17,11 +17,8 @@ function ListItem(props) {
                 
                 
                 <button onClick={() => { 
-                   if (props.listDetails.id > 7 ) {
                     props.callbackToDelete(props.listDetails.id)
-                   } else {
-                    props.newcallbackToDelete(props.listDetails.id)
-                   }
+                
                  }}>
                     Delete this Task
                 </button>

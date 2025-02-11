@@ -1,7 +1,7 @@
 
 
 html, body{
-  font-family: 'Parkinsans', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   color:#E0E1DD;
   background-color: #0D1B2A;
   display: flex;
@@ -18,7 +18,7 @@ html, body{
 }
 
 span {
-  font-size:32px;
+  font-size:42px;
 }
 a{
   font-size: 24px;
@@ -32,8 +32,8 @@ a{
 }
 a:hover{
   font-size: 32px;
-  background-color: #415A77;
-  box-shadow: #778DA9 3px 2px;
+  background-color: #1B263B;
+  box-shadow: #000 3px 4px 5px;
 
 }
 p{
@@ -44,7 +44,9 @@ button{
   font-size: 18px;
   padding: 12px;
   background-color:#ffb703;
-  color:#0D1B2A
+  color:#0D1B2A;
+  border-radius: 2px;
+
 }
 .nav-bar{
     display:flex;
@@ -56,8 +58,8 @@ button{
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
     height:10% ;
-    left: 0;
     background-color: #1B263B;
+    left: 0;
   
 }
 .logo img{
@@ -112,13 +114,40 @@ button{
 }
 
 .Addtask-box {
-  align-self: center;
-  width: 97%;
-  max-width: 455px;
+
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 12px;
-  margin-top: 38px;
+  height: 70px;
+  width: 100%;
+  max-width: 455px;
+  border: 1px solid #c2b39a;
+  font-size: 16px;
+  background-color: #0d0d0d;
+  color: #fff;
+  padding: 12px;
+  
+}
+
+.form input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  max-width: 455px;
+  border: 1px solid #c2b39a;
+  font-size: 16px;
+  background-color: #0d0d0d;
+  color: #fff;
+  padding: 12px;
+}
+.form input {
+  outline: transparent;
+  width: calc(100% - 14px);
+  height: calc(100% - 12px);
+  border: transparent;
 }
 
 
