@@ -1,9 +1,12 @@
 
-
+#root{
+  width: 50%;
+  align-content: center;
+}
 html, body{
-  font-family: 'Bebas Neue', sans-serif;
-  color:#E0E1DD;
-  background-color: #0D1B2A;
+  font-family: sans-serif;
+  color:#0D1B2A;
+  background-color: #e1e1e1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,52 +19,72 @@ html, body{
   margin: 0;
   padding: 0
 }
-
+h1{
+ text-align: center;
+ color: #0D1B2A;
+}
 span {
   font-size:42px;
 }
-a{
+
+ a{
   font-size: 24px;
   text-align: center;
-  color:#E0E1DD;
+  color:#0D1B2A;
   padding: 24px;
   margin-bottom: 15px;
   text-decoration: none;
-  border-radius: 10px;
-  border:#E0E1DD solid thin
+  border-bottom: #0D1B2A solid thin
 }
 a:hover{
   font-size: 32px;
-  background-color: #1B263B;
-  box-shadow: #000 3px 4px 5px;
-
+  background-color: #d1d4d7;
 }
 p{
   font-size: 18px;
   text-wrap: wrap;
 }
-button{
-  font-size: 18px;
-  padding: 12px;
-  background-color:#ffb703;
-  color:#0D1B2A;
-  border-radius: 2px;
 
+.delete-button {
+  padding: 0.5rem;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-.nav-bar{
-    display:flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 50px;
-    overflow: hidden;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-    height:10% ;
-    background-color: #1B263B;
-    left: 0;
-  
+.add-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.nav-bar {
+  width: 100%;
+  height:10% ;
+  top: 0; 
+  left:0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  padding: 1rem 4rem;
+  background-color: #3498db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  top: 0;
+  z-index: 1;
+}
+
+.nav-bar h1{
+  /* color:#d1d4d7; */
+  font-size: 58px;
+  margin-left: -15%;
+}
+
 .logo img{
   width: 10%;
   height: 10%;
@@ -69,13 +92,6 @@ button{
 }
 
 
-.dashboar-container{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #E0E1DD;
-
-}
 .side-bar {
   position: absolute;
   top:0;
@@ -90,66 +106,43 @@ button{
   
 }
 .list-container{
-  padding-left: 25%;
-  display: flex;
-  align-content: stretch;
-  flex-wrap: wrap;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  justify-content: center;
 }
 
 .list-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  /* flex-wrap: wrap; */
-  height: 70px;
-  width: 100%;
-  max-width: 455px;
-  border: 1px solid #E0E1DD;
-  border-radius: 10px;
-  margin-bottom: 5px;
-  font-size: 16px;
-  color:#E0E1DD;
-  padding: 12px;
-  margin: 10px;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #f5f1f1;
+  border-radius: 5px;
+  color:#0D1B2A;
+  transition: transform 0.2s ease;
+
 }
 
-.Addtask-box {
+.form-box {
 
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-  width: 100%;
-  max-width: 455px;
-  border: 1px solid #c2b39a;
-  font-size: 16px;
-  background-color: #0d0d0d;
-  color: #fff;
-  padding: 12px;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
   
 }
-
-.form input {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-  width: 100%;
-  max-width: 455px;
-  border: 1px solid #c2b39a;
-  font-size: 16px;
-  background-color: #0d0d0d;
-  color: #fff;
-  padding: 12px;
+.todo-input {
+  flex: 1;
+  margin-right: 15px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
 }
-.form input {
-  outline: transparent;
-  width: calc(100% - 14px);
-  height: calc(100% - 12px);
-  border: transparent;
-}
-
 
 
 .footer {
@@ -160,6 +153,14 @@ button{
   width: 100%;
   color: #E0E1DD;
   text-align: center;
-  background-color: #1B263B;
+  background-color: #3498db;
 
 }
+.footer a{
+  font-size: 32px;
+}
+.footer a:hover{
+  font-size: 36px;
+  background-color: #d1d4d700;
+}
+

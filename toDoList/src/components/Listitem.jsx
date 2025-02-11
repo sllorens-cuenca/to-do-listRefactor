@@ -16,7 +16,7 @@ function ListItem(props) {
             <div>
                 
                 
-                <button onClick={() => { 
+                <button className="delete-button" onClick={() => { 
                     props.callbackToDelete(props.listDetails.id)
                 
                  }}>
