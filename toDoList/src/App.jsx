@@ -10,6 +10,7 @@ import List from './pages/List'
 import NewList from "./pages/NewList";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import TaskDetails from "./components/TaskDetails";
 
 import {v4 as uuid} from 'uuid'
 import './App.css'
@@ -34,6 +35,12 @@ function App() {
   }
 
 
+  const callbackToEdit = (editedTask) => {
+    setTasktoDisplay(prev =>    prev.map(task => task.id === editedTask.id ? editedTask : task))
+   
+ 
+  }
+
     return (
         <>
             <Navbar />            
@@ -44,6 +51,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/my-lists" element={<List callbackToCreate={createTask} setTaskToDisplay={setTasktoDisplay} tasksArr={taskToDisplay} callbackToDelete = {deleteTask}/>} />
                 <Route path="*" element={<NotFound />} />
+                <Route path="/taskDetails/:taskId" element={<TaskDetails tasksArr={taskToDisplay} callbackToEdit={callbackToEdit} />}/>
             </Routes>
           
             <Footer />
