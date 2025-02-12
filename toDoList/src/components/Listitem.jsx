@@ -8,13 +8,13 @@ function ListItem(props) {
 
             <div>
                 
-                <button className="delete-button" onClick={() => { 
+                <button className="delete" onClick={() => { 
                     props.callbackToDelete(props.listDetails.id)
                 
                  }}>
                     Delete this Task
                 </button>
-                <button onClick={() => { 
+                <button className="complete" onClick={() => { 
                     props.setTaskToDisplay(prev => prev.map(task => task.id === props.listDetails.id ? {...task, completed: !task.completed} : task))
                  }}>
                     Mark as completed

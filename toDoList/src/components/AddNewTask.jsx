@@ -36,7 +36,7 @@ function AddNewTask(props) {
                         value={task}
                         onChange={(e) => { setTask(e.target.value) }}
                     />
-                    <button  className="add-button">Submit</button>
+                    <button  className="add">Submit</button>
                 </label>
 
                 

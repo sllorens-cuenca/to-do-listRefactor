@@ -45,16 +45,33 @@ p{
   text-wrap: wrap;
 }
 
-.delete-button {
-  padding: 0.5rem;
+button {
+  padding: 1rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: medium;
+}
+button.delete {
   background-color: #e74c3c;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-right: 15px;
 }
-.add-button {
+button.complete {
+  background-color: #148001;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button.add {
   padding: 0.8rem 1.5rem;
   background-color: #3498db;
   color: white;
@@ -80,7 +97,7 @@ p{
 }
 
 .nav-bar h1{
-  /* color:#d1d4d7; */
+ 
   font-size: 58px;
   margin-left: -15%;
 }

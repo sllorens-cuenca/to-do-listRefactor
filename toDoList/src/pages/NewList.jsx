@@ -30,14 +30,13 @@ function NewList(props) {
     }
 
     return (
-      <>
-      <div className="Addtask-box">
-            {/* form */}
-            <form onSubmit={handleSubmit}>
+        <div >
+             {/* form */}
+             <form className="form-box" onSubmit={handleSubmit} >
 
                 <label>
-                    Task to Do:
-                    <input
+                    <h1>Task to Do:</h1>
+                     <input className="todo-input"
                         type="text"
                         name="task"
                         required={true}
@@ -45,20 +44,12 @@ function NewList(props) {
                         value={task}
                         onChange={(e) => { setTask(e.target.value) }}
                     />
+                    <button  className="add">Submit</button>
                 </label>
 
-                <button>Submit</button>
+                
             </form>
         </div>
-        {/* {props.tasksArr.map((listObj) => {
-                return (
-                    <ListItem listDetails={listObj} callbackToDelete={props.callbackToDelete} />
-
-                )
-            })} */}
-      </>
-        
-        
     );
 }
 
