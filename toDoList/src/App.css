@@ -181,3 +181,4 @@ button.add {
   background-color: #d1d4d700;
 }
 
+.completed { text-decoration: line-through; }
