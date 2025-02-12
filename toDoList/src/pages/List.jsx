@@ -1,26 +1,25 @@
-import ListItem from "../components/listItem";
 import AddNewTask from "../components/AddNewTask";
+import ListItem from "../components/listItem";
 
 
 
-function List(props) {
-    console.log(props)
+function List({callbackToCreate, callbackToDelete, tasksArr,  setTaskToDisplay}) {
+
+console.log(setTaskToDisplay)
+
+    
+    console.log(tasksArr)
     return (
-        
         <div className="list-container">
-        <AddNewTask />
-            {props.tasksArr.map((listObj) => {
-                return (
-                    <ListItem listDetails={listObj} callbackToDelete={props.callbackToDelete} />
-
-                )
-            })}
-             {/* {props.newTasks.map((listObj) => {
-                return (
-                    <ListItem listDetails={listObj} newcallbackToDelete={props.newcallbackToDelete} />
-
-                )
-            })} */}
+            
+                <AddNewTask callbackToCreate={callbackToCreate} />
+           
+                {tasksArr.map((listObj) => {
+                    return (
+                        <ListItem setTaskToDisplay={setTaskToDisplay} listDetails={listObj} callbackToDelete={callbackToDelete} />
+                    )
+                })}
+          
         </div>
 
     )

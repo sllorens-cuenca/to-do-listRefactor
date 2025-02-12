@@ -23,12 +23,12 @@ function AddNewTask(props) {
 
     return (
         <div >
-            {/* form */}
-            <form className="form-box" onSubmit={handleSubmit} >
+             {/* form */}
+             <form className="form-box" onSubmit={handleSubmit} >
 
                 <label>
                     <h1>Task to Do:</h1>
-                    <input className="todo-input"
+                     <input className="todo-input"
                         type="text"
                         name="task"
                         required={true}
@@ -36,10 +36,10 @@ function AddNewTask(props) {
                         value={task}
                         onChange={(e) => { setTask(e.target.value) }}
                     />
-                     <button className="add-button" type="submit">Submit</button>
+                    <button  className="add-button">Submit</button>
                 </label>
 
-               
+                
             </form>
         </div>
     );

@@ -1,13 +1,6 @@
 
-
-//Iscompleted condition
-//.map()
-
-
-// import { Link } from "react-router-dom";
-
 function ListItem(props) {
-    
+    console.log(props   )
     return (
         <div className="list-item">
             <p>{props.listDetails.completed ? "✅" : "❌"} {props.listDetails.task}</p>
@@ -15,20 +8,17 @@ function ListItem(props) {
 
             <div>
                 
-                
                 <button className="delete-button" onClick={() => { 
                     props.callbackToDelete(props.listDetails.id)
                 
                  }}>
                     Delete this Task
                 </button>
-
-                {/* <button onClick={() => { props.callbackToDelete(props.listDetails.id),  props.newcallbackToDelete(props.listDetails.id) }}>
-                    Delete this Task
-
-
-                      props.listDetails.id > 8 ?  props.newcallbackToDelete(props.listDetails.id) : props.callbackToDelete(props.listDetails.id)
-                </button> */}
+                <button onClick={() => { 
+                    props.setTaskToDisplay(prev => prev.map(task => task.id === props.listDetails.id ? {...task, completed: !task.completed} : task))
+                 }}>
+                    Mark as completed
+                </button>
 
 
             </div>
