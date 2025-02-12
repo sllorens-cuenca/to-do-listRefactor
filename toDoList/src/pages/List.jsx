@@ -1,5 +1,4 @@
 import AddNewTask from "../components/AddNewTask";
-import AddNewTask from "../components/AddNewTask";
 import ListItem from "../components/listItem";
 
 
@@ -10,26 +9,18 @@ console.log(setTaskToDisplay)
 
     
     console.log(tasksArr)
-function List({callbackToCreate, callbackToDelete, tasksArr,  setTaskToDisplay}) {
-
-console.log(setTaskToDisplay)
-
-    
-    console.log(tasksArr)
     return (
-        <div>
-            <div>
+        <div className="list-container">
+            
                 <AddNewTask callbackToCreate={callbackToCreate} />
-            </div>
-            <div className="page">
+           
                 {tasksArr.map((listObj) => {
                     return (
                         <ListItem setTaskToDisplay={setTaskToDisplay} listDetails={listObj} callbackToDelete={callbackToDelete} />
                     )
                 })}
-            </div>
+          
         </div>
-
 
     )
 

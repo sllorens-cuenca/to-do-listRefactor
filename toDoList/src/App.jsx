@@ -1,4 +1,3 @@
-
 import { Routes, Route, NavLink } from "react-router-dom";
 import { useState } from 'react'
 
@@ -31,21 +30,8 @@ function App() {
 
     // create new task
   const createTask = (taskDetail) => {
-
-    const taskId = taskToDisplay.map((task) => task.id);
-    const maxId = Math.max(...taskId);
-    const nextId = maxId + 1;
-
-    const newTask = {
-      ...taskDetail,
-      id: nextId
-    }
-
-    // const newList = [newId, ...taskToDisplay];
-
-    // setNewTasks([...newTasks, newTask]);
+    setTasktoDisplay([{...taskDetail, id: uuid()},...taskToDisplay]);
   }
-//   <AddNewTask callbackToCreate = {createTask}/>
 
 
     return (
