@@ -2,7 +2,7 @@ function About() {
   return (
     <div className="list-container">
       <h1>about this project</h1>
-     <br></br>
+      <br></br>
       <p>
         this project is done as a code along example to showcase a project that
         has: <br />-

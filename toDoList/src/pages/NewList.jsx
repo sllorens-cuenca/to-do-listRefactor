@@ -1,13 +1,6 @@
 import { useState } from "react";
 
-import ListItem from "../components/listItem";
 
-/* const listscontainer =[]
-then this needs to summ all new list into the new lists container
-
-listscontainers =  NewList
-
-*/
 function NewList(props) {
 
     const [task, setTask] = useState("");
@@ -31,12 +24,12 @@ function NewList(props) {
 
     return (
         <div >
-             {/* form */}
-             <form className="form-box" onSubmit={handleSubmit} >
+            {/* form */}
+            <form className="form-box" onSubmit={handleSubmit} >
 
                 <label>
                     <h1>Task to Do:</h1>
-                     <input className="todo-input"
+                    <input className="todo-input"
                         type="text"
                         name="task"
                         required={true}
@@ -44,14 +37,12 @@ function NewList(props) {
                         value={task}
                         onChange={(e) => { setTask(e.target.value) }}
                     />
-                    <button  className="add">Submit</button>
+                    <button className="add">Submit</button>
                 </label>
 
-                
             </form>
         </div>
     );
 }
-
 
 export default NewList;
