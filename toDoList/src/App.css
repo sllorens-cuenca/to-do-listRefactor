@@ -61,6 +61,7 @@ button{
     left: 0;
   
 }
+
 .logo img{
   width: 10%;
   height: 10%;
@@ -78,10 +79,12 @@ button{
 .side-bar {
   position: absolute;
   top:0;
+  top:0;
   left: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 18vw;
   width: 18vw;
   padding-top: 10%;
   padding-left: 50px;
@@ -155,6 +158,9 @@ button{
   padding: 15px;
   position: fixed;
   left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #E0E1DD;
   bottom: 0;
   width: 100%;
   color: #E0E1DD;

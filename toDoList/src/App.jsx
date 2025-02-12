@@ -9,7 +9,7 @@ import SideBar from './components/Sidebar'
 import tasks from './data/tasks.json'
 import List from './pages/List'
 import NewList from "./pages/NewList";
-import About from "./pages/about";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
 import {v4 as uuid} from 'uuid'
@@ -31,18 +31,22 @@ function App() {
 
     // create new task
   const createTask = (taskDetail) => {
-    setTasktoDisplay([...taskToDisplay, {...taskDetail, id: uuid()}]);
-  }
 
-  //mark as completed
-//   const completedTask = () => {
-//     setTasktoDisplay((prevState) => {
-//         return {
-//             ...prevState,
-//             completed: !prevState
-//         };
-//     });
-// }
+    const taskId = taskToDisplay.map((task) => task.id);
+    const maxId = Math.max(...taskId);
+    const nextId = maxId + 1;
+
+    const newTask = {
+      ...taskDetail,
+      id: nextId
+    }
+
+    // const newList = [newId, ...taskToDisplay];
+
+    // setNewTasks([...newTasks, newTask]);
+  }
+//   <AddNewTask callbackToCreate = {createTask}/>
+
 
     return (
         <>

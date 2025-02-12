@@ -1,8 +1,15 @@
 import AddNewTask from "../components/AddNewTask";
+import AddNewTask from "../components/AddNewTask";
 import ListItem from "../components/listItem";
 
 
 
+function List({callbackToCreate, callbackToDelete, tasksArr,  setTaskToDisplay}) {
+
+console.log(setTaskToDisplay)
+
+    
+    console.log(tasksArr)
 function List({callbackToCreate, callbackToDelete, tasksArr,  setTaskToDisplay}) {
 
 console.log(setTaskToDisplay)
@@ -22,6 +29,7 @@ console.log(setTaskToDisplay)
                 })}
             </div>
         </div>
+
 
     )
 

@@ -1,7 +1,8 @@
 function About() {
     return (
-      <div className="d-flex justify-content-center align-items-center flex-column gap-5 m-5">
+      <div className="list-container">
         <h1>about this project</h1>
+       <br></br>
         <p>
           this project is done as a code along example to showcase a project that
           has: <br />-
@@ -13,11 +14,9 @@ function About() {
             A SPA React Application consisting of multiple views ✅ <br />
           </i>
           -
-          <i>
-            Cute cats and dogs images ✅<br />
-          </i>
         </p>
-        For Web Development Miami class of April 2024 💟
+        For Web Development Full Time class of January 2025 💟
+        Made by Sergio Llorens and Olga ML
       </div>
     );
   }
